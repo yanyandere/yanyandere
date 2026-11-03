@@ -17,6 +17,7 @@ class Note:
     dur: float    # beats
     pitch: int
     vel: int
+    tag: str = ""  # "app": appoggiatura (must resolve by step); "orn": ornament (gliss)
 
 
 def write_midi(notes: list[Note], path: Path, bpm: float, cc: list[tuple[float, int, int]] = (),

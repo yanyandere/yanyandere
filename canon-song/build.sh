@@ -3,11 +3,13 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 export TF_CPP_MIN_LOG_LEVEL=3
-.venv/bin/python compose.py
-.venv/bin/python render.py canon_sketch 2>&1 | grep -v '^DPF'
+NAME=canon_for_a_dying_world
+.venv/bin/python compose.py 2>&1 | grep -v 'out of midi channels'
+.venv/bin/python render.py "$NAME" 2>&1 | grep -vE '^(DPF|\[WRN\])'
 status=0
-.venv/bin/python verify.py canon_sketch || status=$?
+.venv/bin/python verify.py "$NAME" || status=$?
 mkdir -p renders
-cp build/audio/canon_sketch.mp3 build/audio/canon_sketch_spectrogram.png build/score.musicxml \
-   build/canon_sketch_all_tracks.mid build/report.json renders/
+rm -f renders/canon_sketch*
+cp "build/audio/$NAME.mp3" "build/audio/${NAME}_spectrogram.png" "build/$NAME.musicxml" "build/$NAME.mid" \
+   build/report.json renders/
 exit $status
