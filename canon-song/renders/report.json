@@ -1,0 +1,379 @@
+{
+  "symbolic": {
+    "strong_beat_chord_tones": "225/225"
+  },
+  "stems": {
+    "rhodes": {
+      "precision": 0.809,
+      "recall": 0.969,
+      "f1": 0.882,
+      "octave_errors": 0,
+      "n_ref": 162,
+      "n_est": 194
+    },
+    "bass_arco": {
+      "precision": 0.5,
+      "recall": 0.778,
+      "f1": 0.609,
+      "octave_errors": 0,
+      "n_ref": 9,
+      "n_est": 14
+    },
+    "bass_pizz": {
+      "precision": 0.483,
+      "recall": 0.862,
+      "f1": 0.619,
+      "octave_errors": 4,
+      "n_ref": 65,
+      "n_est": 116
+    },
+    "trumpet": {
+      "precision": 0.808,
+      "recall": 0.984,
+      "f1": 0.887,
+      "octave_errors": 0,
+      "n_ref": 64,
+      "n_est": 78
+    },
+    "horn": {
+      "precision": 0.761,
+      "recall": 0.85,
+      "f1": 0.803,
+      "octave_errors": 0,
+      "n_ref": 60,
+      "n_est": 67
+    },
+    "flute": {
+      "precision": 0.846,
+      "recall": 0.971,
+      "f1": 0.904,
+      "octave_errors": 0,
+      "n_ref": 34,
+      "n_est": 39
+    },
+    "glock": {
+      "precision": 0.831,
+      "recall": 0.794,
+      "f1": 0.812,
+      "octave_errors": 0,
+      "n_ref": 68,
+      "n_est": 65
+    }
+  },
+  "mix": {
+    "key": "D major (0.91)",
+    "bpm": 84.0,
+    "chord_agreement": 0.885,
+    "chords": [
+      [
+        "DM9",
+        "D",
+        true
+      ],
+      [
+        "A/C#",
+        "A",
+        true
+      ],
+      [
+        "Bm9",
+        "D",
+        true
+      ],
+      [
+        "F#m7/A",
+        "F#m",
+        true
+      ],
+      [
+        "GM9",
+        "G",
+        true
+      ],
+      [
+        "Dadd9/F#",
+        "D",
+        true
+      ],
+      [
+        "GM9",
+        "D",
+        true
+      ],
+      [
+        "A9",
+        "A",
+        true
+      ],
+      [
+        "DM9",
+        "D",
+        true
+      ],
+      [
+        "A/C#",
+        "A",
+        true
+      ],
+      [
+        "Bm9",
+        "D",
+        true
+      ],
+      [
+        "F#m7/A",
+        "A",
+        true
+      ],
+      [
+        "GM9",
+        "D",
+        true
+      ],
+      [
+        "Dadd9/F#",
+        "D",
+        true
+      ],
+      [
+        "GM9",
+        "D",
+        true
+      ],
+      [
+        "A7sus4 add 9",
+        "A",
+        false
+      ],
+      [
+        "A9",
+        "A",
+        true
+      ],
+      [
+        "DM9",
+        "Am",
+        false
+      ],
+      [
+        "A/C#",
+        "A",
+        true
+      ],
+      [
+        "Bm9",
+        "D",
+        true
+      ],
+      [
+        "F#m7/A",
+        "A",
+        true
+      ],
+      [
+        "GM9",
+        "D",
+        true
+      ],
+      [
+        "F#7b13",
+        "C#m",
+        false
+      ],
+      [
+        "Em9/G",
+        "G",
+        true
+      ],
+      [
+        "A7b9",
+        "A",
+        true
+      ],
+      [
+        "DM9",
+        "D",
+        true
+      ]
+    ]
+  },
+  "mood": {
+    "moodtheme_top10": [
+      [
+        "relaxing",
+        0.1738000065088272
+      ],
+      [
+        "meditative",
+        0.11990000307559967
+      ],
+      [
+        "emotional",
+        0.09629999846220016
+      ],
+      [
+        "film",
+        0.08730000257492065
+      ],
+      [
+        "christmas",
+        0.08150000125169754
+      ],
+      [
+        "romantic",
+        0.07989999651908875
+      ],
+      [
+        "soft",
+        0.07859999686479568
+      ],
+      [
+        "happy",
+        0.07500000298023224
+      ],
+      [
+        "calm",
+        0.06430000066757202
+      ],
+      [
+        "sad",
+        0.06319999694824219
+      ]
+    ],
+    "moodtheme_targets": {
+      "melancholic": {
+        "score": 0.038600001484155655,
+        "rank": 21
+      },
+      "hopeful": {
+        "score": 0.030700000002980232,
+        "rank": 29
+      },
+      "epic": {
+        "score": 0.018699999898672104,
+        "rank": 35
+      },
+      "dramatic": {
+        "score": 0.015699999406933784,
+        "rank": 38
+      },
+      "film": {
+        "score": 0.08730000257492065,
+        "rank": 4
+      },
+      "emotional": {
+        "score": 0.09629999846220016,
+        "rank": 3
+      },
+      "sad": {
+        "score": 0.06319999694824219,
+        "rank": 10
+      },
+      "retro": {
+        "score": 0.004100000020116568,
+        "rank": 50
+      },
+      "inspiring": {
+        "score": 0.050599999725818634,
+        "rank": 17
+      }
+    },
+    "genre_top10": [
+      [
+        "Electronic---Ambient",
+        0.15389999747276306
+      ],
+      [
+        "Electronic---Downtempo",
+        0.09059999883174896
+      ],
+      [
+        "Electronic---Dungeon Synth",
+        0.06750000268220901
+      ],
+      [
+        "Electronic---New Age",
+        0.05889999866485596
+      ],
+      [
+        "Electronic---Experimental",
+        0.048700001090765
+      ],
+      [
+        "Folk, World, & Country---Nordic",
+        0.04490000009536743
+      ],
+      [
+        "Electronic---Future Jazz",
+        0.03709999844431877
+      ],
+      [
+        "Folk, World, & Country---Folk",
+        0.034299999475479126
+      ],
+      [
+        "Electronic---Leftfield",
+        0.033900000154972076
+      ],
+      [
+        "Electronic---Trip Hop",
+        0.02810000069439411
+      ]
+    ],
+    "genre_targets": {
+      "Classical---Neo-Classical": 0.021199999377131462,
+      "Jazz---Easy Listening": 0.00839999970048666,
+      "Jazz---Fusion": 0.01759999990463257,
+      "Jazz---Jazz-Funk": 0.00800000037997961,
+      "Jazz---Soul-Jazz": 0.006200000178068876,
+      "Stage & Screen---Score": 0.006500000134110451,
+      "Stage & Screen---Soundtrack": 0.02070000022649765
+    },
+    "instrument_top8": [
+      [
+        "piano",
+        0.25459998846054077
+      ],
+      [
+        "synthesizer",
+        0.19599999487400055
+      ],
+      [
+        "guitar",
+        0.1589999943971634
+      ],
+      [
+        "bass",
+        0.14579999446868896
+      ],
+      [
+        "drums",
+        0.14110000431537628
+      ],
+      [
+        "flute",
+        0.13670000433921814
+      ],
+      [
+        "electricguitar",
+        0.11969999969005585
+      ],
+      [
+        "harp",
+        0.09790000319480896
+      ]
+    ],
+    "happy": 0.05299999937415123,
+    "sad": 0.8163999915122986,
+    "deam_valence_arousal_1to9": [
+      3.5299999713897705,
+      3.700000047683716
+    ]
+  },
+  "master": {
+    "lufs": -14.06,
+    "true_peak_dbtp": -1.41,
+    "loudness_range_lu": 7.8
+  },
+  "failures": []
+}
