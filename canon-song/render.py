@@ -138,7 +138,8 @@ def main(name: str = "canon_for_a_dying_world") -> None:
     sf.write(wav, y.T, SR, subtype="PCM_24")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-c:a", "libmp3lame", "-q:a", "0",
                     str(out / f"{name}.mp3")], check=True)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-c:a", "flac", str(out / f"{name}.flac")],
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-c:a", "flac", "-compression_level", "12",
+                    str(out / f"{name}.flac")],
                    check=True)
     print(f"{wav.name}: {y.shape[1] / SR:.1f} s, {meter.integrated_loudness(y.T):.1f} LUFS, "
           f"true peak {true_peak_db(y):.2f} dBTP")

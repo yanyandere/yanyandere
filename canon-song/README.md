@@ -5,7 +5,8 @@ Canon. The mood is bittersweet, in the Evangelion / NieR: Automata vein:
 fighting to survive, still hoping, surrounded by tragedy.
 
 **Listen:** [`renders/canon_for_a_dying_world.mp3`](renders/canon_for_a_dying_world.mp3)
-(4:31, D major → D minor → E major → D major, 84 BPM).
+(4:31, D major → D minor → E major → D major, 84 BPM). Lossless master:
+[`renders/canon_for_a_dying_world.flac`](renders/canon_for_a_dying_world.flac).
 
 ## The idea
 
@@ -105,15 +106,28 @@ an octave up. Their spectra show partials at 2:3:4 (bells), 1:1.5:2
 (timpani), and odd partials at 3f/5f (tremolo), which put the heard pitch at
 the written note.
 
+## Files in `renders/`
+
+| File | What it is |
+|---|---|
+| `canon_for_a_dying_world.mp3` | MP3, VBR ~264 kbps, 48 kHz stereo |
+| `canon_for_a_dying_world.flac` | Lossless master, 24-bit / 48 kHz (−14 LUFS, −1.3 dBTP) |
+| `stems/*.flac` | 26 dry stems, 24-bit / 48 kHz: each part after its own EQ, level, compression and pan, before the shared reverb, tape and mastering. They start at bar 1 (0:00). The master runs 614 samples (12.8 ms) behind them, from the master-bus plugins' latency (mostly the limiter's 10 ms lookahead) |
+| `midi/*.mid` | The exact MIDI each sample library played: humanised timing and velocity, CC11 swells, latency compensation, a 2-beat lead-in. The glockenspiel is written an octave low because VSCO maps it an octave high |
+| `canon_for_a_dying_world.mid` | Quantised multi-track MIDI with General MIDI programs, for opening in a DAW |
+| `canon_for_a_dying_world.musicxml` | Score with chord symbols |
+| `canon_for_a_dying_world_spectrogram.png` | Spectrogram and loudness curve with section markers |
+| `report.json` | Full verification results |
+
+The 24-bit WAV (same audio as the FLAC) and the MP4 preview (the spectrogram
+plus the MP3 audio) stay in `build/`.
+
 ## Build
 
 ```bash
 ./setup.sh   # apt packages, patched sfizz_render, sample libraries, plugins, models, Python envs
-./build.sh   # compose -> render -> verify; copies deliverables to renders/
+./build.sh   # compose -> render -> verify -> publish.sh (copies the deliverables to renders/)
 ```
-
-`build/` also gets the FLAC master, 24-bit stems and per-part MIDI. They are
-not committed (about 450 MB).
 
 ## Credits and licences
 

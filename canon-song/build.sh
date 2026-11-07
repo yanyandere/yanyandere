@@ -8,8 +8,5 @@ NAME=canon_for_a_dying_world
 .venv/bin/python render.py "$NAME" 2>&1 | grep -vE '^(DPF|\[WRN\])'
 status=0
 .venv/bin/python verify.py "$NAME" || status=$?
-mkdir -p renders
-rm -f renders/canon_sketch*
-cp "build/audio/$NAME.mp3" "build/audio/${NAME}_spectrogram.png" "build/$NAME.musicxml" "build/$NAME.mid" \
-   build/report.json renders/
+./publish.sh "$NAME"
 exit $status
