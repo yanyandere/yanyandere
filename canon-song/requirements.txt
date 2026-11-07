@@ -1,0 +1,14 @@
+music21==10.5.2
+mido
+pedalboard==0.9.26
+numpy
+scipy
+soundfile
+librosa
+pyloudnorm
+matplotlib
+verovio
+essentia-tensorflow
+basic-pitch[onnx]
+mir_eval
+setuptools<81  # resampy (basic-pitch dep) still imports pkg_resources
